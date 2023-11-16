@@ -7,12 +7,16 @@ const Moreno = sequelize.define("moreno", {
     primaryKey: true,
     autoIncrement: true,
   },
-  ingreso: {
+  modelo: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  monto: {
-    type: DataTypes.DECIMAL,
+  stock: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  precio: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });

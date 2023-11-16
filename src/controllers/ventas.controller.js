@@ -11,10 +11,13 @@ const getVentas = async (req, res) => {
 
 const createVentas = async (req, res) => {
   try {
-    const { egreso, monto } = req.body;
+    const { cliente, cantidad, modelo, detalles, precio } = req.body;
     const newVentas = await Ventas.create({
-      egreso,
-      monto,
+      cliente,
+      cantidad,
+      modelo,
+      detalles,
+      precio,
     });
     res.json(newVentas);
   } catch (error) {

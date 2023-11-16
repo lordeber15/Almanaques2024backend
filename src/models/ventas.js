@@ -7,11 +7,23 @@ const Ventas = sequelize.define("venta", {
     primaryKey: true,
     autoIncrement: true,
   },
-  egreso: {
+  cliente: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  monto: {
+  cantidad: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  modelo: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  detalles: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  precio: {
     type: DataTypes.DECIMAL,
     allowNull: false,
   },

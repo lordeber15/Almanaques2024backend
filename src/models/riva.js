@@ -7,8 +7,16 @@ const Riva = sequelize.define("riva", {
     primaryKey: true,
     autoIncrement: true,
   },
-  report: {
-    type: DataTypes.DATE,
+  modelo: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  stock: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  precio: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });

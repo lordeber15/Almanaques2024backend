@@ -11,10 +11,11 @@ const getMoreno = async (req, res) => {
 
 const createMoreno = async (req, res) => {
   try {
-    const { ingreso, monto } = req.body;
+    const { modelo, stock, precio } = req.body;
     const newMoreno = await Moreno.create({
-      ingreso,
-      monto,
+      modelo,
+      stock,
+      precio,
     });
     res.json(newMoreno);
   } catch (error) {

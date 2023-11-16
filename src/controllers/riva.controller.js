@@ -11,9 +11,11 @@ const getRiva = async (req, res) => {
 
 const createRiva = async (req, res) => {
   try {
-    const { report } = req.body;
+    const { modelo, stock, precio } = req.body;
     const newRiva = await Riva.create({
-      report,
+      modelo,
+      stock,
+      precio,
     });
     res.json(newRiva);
   } catch (error) {
